@@ -77,22 +77,30 @@ cave_css = """
     
     /* 强制调整输入框和按钮在一行，且样式统一 */
     div[data-testid="stHorizontalBlock"] {
-        align-items: flex-end !important;
-        background: rgba(20, 20, 20, 0.6);
-        border: 1px solid #4a3f21;
-        border-radius: 50px;
-        padding: 5px 20px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5), inset 0 0 10px rgba(212, 175, 55, 0.05);
-        margin-bottom: 2rem;
-        transition: all 0.3s ease;
+        align-items: center !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(212, 175, 55, 0.2) !important;
+        border-radius: 50px !important;
+        padding: 5px 20px !important;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6) !important;
+        margin-bottom: 2rem !important;
+        transition: all 0.3s ease !important;
     }
     div[data-testid="stHorizontalBlock"]:focus-within {
-        border-color: #d4af37;
-        box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        border-color: #d4af37 !important;
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.3) !important;
     }
     
+    /* REMOVE ALL WHITE BACKGROUNDS FROM INPUT */
+    div[data-testid="stTextInput"], div[data-testid="stTextInput"] > div, div[data-testid="stTextInput"] div[data-baseweb="input"], div[data-testid="stTextInput"] div[data-baseweb="base-input"] {
+        background-color: transparent !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
     .stTextInput input {
         background-color: transparent !important;
+        background: transparent !important;
         color: #fff !important;
         border: none !important;
         padding: 10px 0 !important;
@@ -103,20 +111,24 @@ cave_css = """
     /* 按钮微调：小而精 */
     .stButton > button {
         background-color: transparent !important;
+        background: transparent !important;
         color: #d4af37 !important;
         border: none !important;
+        box-shadow: none !important;
         font-size: 1.5rem !important;
         padding: 0 !important;
-        width: 40px !important;
-        height: 40px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.2s ease;
+        width: 45px !important;
+        height: 45px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        transition: transform 0.2s ease !important;
+        min-width: 45px !important;
     }
     .stButton > button:hover {
         color: #fff !important;
-        transform: scale(1.2);
+        transform: scale(1.2) !important;
+        background: transparent !important;
     }
 
     /* 卦象结果：破茧动效 */
